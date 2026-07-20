@@ -1,0 +1,28 @@
+cmni-pwa/
+├── README.md
+├── package.json
+├── tsconfig.json
+├── next.config.js
+├── tailwind.config.js
+├── postcss.config.js
+├── public/
+│   ├── manifest.json
+│   └── sw.js
+└── src/
+    ├── app/
+    │   ├── globals.css
+    │   ├── layout.tsx
+    │   └── page.tsx
+    └── components/
+        ├── Navbar.tsx
+        ├── Hero.tsx
+        ├── About.tsx
+        ├── ProblemSolution.tsx
+        ├── WhyMicrogreens.tsx
+        ├── Ecosystem.tsx
+        ├── Innovation.tsx
+        ├── MarketResearch.tsx
+        ├── ImpactSDG.tsx
+        ├── FounderRoadmap.tsx
+        ├── ContactFooter.tsx
+        └── PWAInstall.tsx
