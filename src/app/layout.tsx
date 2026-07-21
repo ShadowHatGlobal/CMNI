@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     title: "Campus Microgreens & Nutrition Initiative (CMNI)",
     description: "Building India's First University-Based Nutrition, Research & Innovation Ecosystem.",
     siteName: "CMNI",
-    images: [{ url: "https://cmni.vercel.app/og-image.jpg" }],
+    images: [{ url: "https://cmni-orcin.vercel.app/og-image.jpg" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Campus Microgreens & Nutrition Initiative",
     description: "India's First University-Based Nutrition & AgTech Ecosystem.",
-    images: ["https://cmni.vercel.app/og-image.jpg"],
+    images: ["https://cmni-orcin.vercel.app/og-image.jpg"],
   },
 };
 
@@ -61,7 +61,7 @@ export default function RootLayout({
                 "name": "Manipur University"
               },
               "description": "Building India's First University-Based Nutrition, Research & Innovation Ecosystem",
-              "url": "https://cmni.vercel.app"
+              "url": "https://cmni-orcin.vercel.app"
             })
           }}
         />
