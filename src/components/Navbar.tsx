@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { 
   Menu, X, Leaf, Info, Layers, Compass, HelpCircle, 
-  PhoneCall, BookOpen, Sparkles, HeartPulse, Activity, ChevronDown 
+  BookOpen, Sparkles, HeartPulse, Activity, ChevronDown 
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -127,7 +127,7 @@ export default function Navbar() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 10 }}
                       transition={{ duration: 0.15 }}
-                      className="absolute right-0 mt-2 w-72 rounded-2xl bg-white shadow-xl border border-slate-100 p-2 overflow-hidden z-50"
+                      className="absolute right-0 mt-2 w-72 rounded-2xl bg-white shadow-xl border-slate-100 p-2 overflow-hidden z-50"
                     >
                       <div className="grid grid-cols-1 gap-1">
                         {dropdownLinks.map((link) => (
@@ -204,65 +204,6 @@ export default function Navbar() {
                   href="/#contact"
                   onClick={(e) => handleScrollTo(e, "/#contact")}
                   className="block w-full text-center px-4 py-3 rounded-xl bg-forest text-white font-bold hover:bg-forest-light transition-all shadow"
-                >
-                  Join Pilot Program
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
-  );
-}              ))}
-            </div>
-
-            <div className="hidden lg:flex items-center">
-              <a
-                href="#contact"
-                className="px-4 py-2 text-sm font-semibold rounded-lg bg-forest text-white hover:bg-forest-light shadow-sm transition-all duration-200"
-              >
-                Join Pilot
-              </a>
-            </div>
-
-            <div className="lg:hidden flex items-center">
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="p-2 rounded-lg text-slate-600 hover:text-forest hover:bg-slate-100 focus:outline-none"
-              >
-                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-x-0 top-[60px] z-40 lg:hidden p-4 bg-white shadow-xl border-b border-slate-100"
-          >
-            <div className="grid grid-cols-1 gap-2 pb-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  onClick={(e) => handleScrollTo(e, link.href)}
-                  className="flex items-center space-x-3 px-4 py-3 rounded-xl text-base font-medium text-slate-700 hover:bg-emerald-50 hover:text-forest transition-all"
-                >
-                  <link.icon className="h-5 w-5 text-mint" />
-                  <span>{link.name}</span>
-                </a>
-              ))}
-              <div className="pt-4 border-t border-slate-100 mt-2">
-                <a
-                  href="#contact"
-                  className="block w-full text-center px-4 py-3 rounded-xl bg-forest text-white font-semibold hover:bg-forest-light transition-all shadow"
                 >
                   Join Pilot Program
                 </a>
