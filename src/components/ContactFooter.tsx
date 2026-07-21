@@ -138,7 +138,7 @@ export default function ContactFooter() {
                 </div>
                 <div className="text-sm">
                   <div className="font-bold text-forest">Inquiries</div>
-                  <a href="mailto:cmni@microbloom.in" className="text-slate-500 hover:text-mint">cmni@microbloom.in</a>
+                  <a href="mailto:kn.microbloomventures@gmail.com" className="text-slate-500 hover:text-mint">cmni@microbloom.in</a>
                 </div>
               </div>
 
