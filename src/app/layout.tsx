@@ -7,19 +7,19 @@ export const metadata: Metadata = {
   description: "Building India's First University-Based Nutrition, Research & Innovation Ecosystem. Founded by Kanchan N, Pilot Campus: Manipur University.",
   manifest: "/manifest.json",
   keywords: ["CMNI", "Microgreens", "Campus Nutrition", "Manipur University", "MicroBloom Enterprises", "Kanchan N", "AgTech India", "Sustainable Agriculture", "Student Wellness"],
-  authors: [{ name: "Kanchan N", url: "https://microbloom.in" }],
+  authors: [{ name: "Kanchan N", url: "https://https://cmni.vercel.app" }],
   openGraph: {
     type: "website",
     title: "Campus Microgreens & Nutrition Initiative (CMNI)",
     description: "Building India's First University-Based Nutrition, Research & Innovation Ecosystem.",
     siteName: "CMNI",
-    images: [{ url: "https://cmni-orcin.vercel.app/og-image.jpg" }],
+    images: [{ url: "https://cmni.vercel.app/og-image.jpg" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Campus Microgreens & Nutrition Initiative",
     description: "India's First University-Based Nutrition & AgTech Ecosystem.",
-    images: ["https://cmni-orcin.vercel.app/og-image.jpg"],
+    images: ["https://cmni.vercel.app/og-image.jpg"],
   },
 };
 
@@ -61,7 +61,7 @@ export default function RootLayout({
                 "name": "Manipur University"
               },
               "description": "Building India's First University-Based Nutrition, Research & Innovation Ecosystem",
-              "url": "https://cmni-orcin.vercel.app"
+              "url": "https://cmni.vercel.app"
             })
           }}
         />
