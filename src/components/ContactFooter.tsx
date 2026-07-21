@@ -34,13 +34,47 @@ export default function ContactFooter() {
     }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({ name: "", email: "", org: "", role: "University Partner", message: "" });
-    }, 4000);
+
+    // Fetch keys securely from Vercel environment variables
+    const apiKey = process.env.NEXT_PUBLIC_SHEETSON_API_KEY;
+    const spreadsheetId = process.env.NEXT_PUBLIC_SPREADSHEET_ID;
+    const sheetName = process.env.NEXT_PUBLIC_SHEET_NAME || "Sheet1";
+
+    // If configuration is missing, use visual fallback so page doesn't crash
+    if (!apiKey || !spreadsheetId) {
+      console.warn("Sheetson configuration is missing. Submitting locally.");
+      setSubmitted(true);
+      return;
+    }
+
+    try {
+      const response = await fetch(`https://api.sheetson.com/v2/sheets/${sheetName}`, {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${apiKey}`,
+          "X-Spreadsheet-Id": spreadsheetId,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          setFormData({ name: "", email: "", org: "", role: "University Partner", message: "" });
+        }, 5000);
+      } else {
+        const errorData = await response.json();
+        console.error("Sheetson Response Error:", errorData);
+        alert("Submission failed. Please check back later.");
+      }
+    } catch (error) {
+      console.error("Network Fetch Error:", error);
+      alert("Network error. Please try again.");
+    }
   };
 
   return (
